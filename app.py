@@ -166,9 +166,9 @@ def event_handle(event):
             json_line = json.dumps(json_line)
             decoded = json.loads(json_line)
             '''
-            crl= pycurl.Curl()
-            crl.setopt( crl.URL, "https://bots.dialogflow.com/line/j--bcfj/webhook")
-            crl.setopt( crl.POST, 1)
+            #crl= pycurl.Curl()
+            #crl.setopt( crl.URL, "https://bots.dialogflow.com/line/j--bcfj/webhook")
+            #crl.setopt( crl.POST, 1)
             #crl.setopt( crl.BINARYTRANSFER, true)
             #crl.setopt( crl.POSTFIELDS, json_headers)
             #crl.setopt( crl.HTTPHEADER, json_headers)
@@ -176,8 +176,8 @@ def event_handle(event):
             #crl.setopt( crl.SSL_VERIFYPEER, 1)
             #crl.setopt( crl.FOLLOWLOCATION, 1)
             #crl.setopt( crl.RETURNTRANSFER, 1)
-            crl.perform()
-            crl.close()
+            #crl.perform()
+            #crl.close()
 
             replyObj = TextSendMessage(text=json_headers)
             line_bot_api.reply_message(rtoken, replyObj)
